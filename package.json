@@ -1,0 +1,24 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "description": "proyecto coderhouse.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thliporace/coder-web-thomas-liporace.git"
+  },
+  "keywords": [
+    "aplicacion",
+    "inventario",
+    "autos"
+  ],
+  "author": "Thomas Liporace Larguia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thliporace/coder-web-thomas-liporace/issues"
+  },
+  "homepage": "https://github.com/thliporace/coder-web-thomas-liporace#readme"
+}
