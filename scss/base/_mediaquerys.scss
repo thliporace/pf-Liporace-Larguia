@@ -1,0 +1,11 @@
+@media screen and (min-width: 768px) {
+    .barra-nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-list {
+        display: none;
+    }
+}

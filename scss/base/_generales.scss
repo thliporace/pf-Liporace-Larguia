@@ -1,0 +1,99 @@
+/* resets*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    margin-top: 65px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    font-family: "Poppins", sans-serif;
+}
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+}
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+h5 {
+    font-size: 15px;
+    font-weight: 700;
+}
+h6 {
+    font-size: 13px;
+    font-weight: 700;
+}
+p {
+    font-size: 16px;
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Botones IMGs y denas*/ 
+
+.logo { 
+    width: 60px;
+    height: 60px;
+}
+$primary-color: #1180F1;
+$button-radius: 28px;
+$button-font-size: 16px;
+$button-text-color: white;
+$button-shadow: 2px 2px 5px rgba($primary-color, 0.67);
+@mixin button-styles($padding-vertical, $padding-horizontal) {
+    background-color: $primary-color;
+    border: none;
+    border-radius: $button-radius;
+    color: $button-text-color;
+    padding: $padding-vertical $padding-horizontal;
+    text-align: center;
+    display: inline-block;
+    font-size: $button-font-size;
+    cursor: pointer;
+    &:hover,
+    &:active {
+        box-shadow: $button-shadow;
+    }
+}
+.boton {
+    @include button-styles(15px, 32px);
+}
+.boton-log {
+    @include button-styles(10px, 20px);
+}
