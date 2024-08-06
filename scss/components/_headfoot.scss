@@ -41,12 +41,35 @@ footer nav {
     background-color: #E5E5E5;
     height: auto;
     width: 100%;
+    max-width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
-    text-align: center;
+
+    div img {
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
+    }
+
     .logorrss {
         width: 25px;
         height: 25px;
+
+        @media screen and (max-width: 650px) {
+            width: 20px;
+            height: 20px;
+        }
     }
 
+    div {
+        h3{
+            text-align: center;
+        }
+        a ul {
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+            margin-bottom: 3px;
+        }
+    };
 }

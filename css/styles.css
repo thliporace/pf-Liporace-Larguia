@@ -9,7 +9,8 @@ main {
   margin: 0;
   height: 100%;
   width: 100%;
-  margin-top: 65px;
+  max-width: 100%;
+  margin-top: 60px;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
 
 footer {
   width: 100%;
+  max-width: 100%;
 }
 
 h1,
@@ -161,38 +163,64 @@ footer nav {
   background-color: #E5E5E5;
   height: auto;
   width: 100%;
+  max-width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
-  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  footer nav div img {
+    display: none;
+  }
 }
 footer nav .logorrss {
   width: 25px;
   height: 25px;
+}
+@media screen and (max-width: 650px) {
+  footer nav .logorrss {
+    width: 20px;
+    height: 20px;
+  }
+}
+footer nav div h3 {
+  text-align: center;
+}
+footer nav div a ul {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 3px;
 }
 
 .heroe-cont {
   width: 100%;
   max-width: 100%;
 }
-.heroe-cont .heroe-txt {
+.heroe-cont div .heroe-txt {
   background-color: #083A72;
   padding: 20px;
-  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.heroe-cont .heroe-txt h1 {
+.heroe-cont div .heroe-txt h1 {
   color: #FFFFFF;
   margin: 15px;
 }
-.heroe-cont .heroe-txt p {
+.heroe-cont div .heroe-txt p {
   color: #798DA3;
   font-size: 18px;
 }
 .heroe-cont .heroe-img {
-  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 .heroe-cont .heroe-img img {
   border-radius: 28px;
-  object-fit: cover;
   width: 80%;
   height: 70%;
 }
@@ -200,14 +228,20 @@ footer nav .logorrss {
 .home-medio {
   width: 100%;
   margin: 25px;
-}
-.home-medio .home-medio {
-  width: 100%;
   max-width: 100%;
   padding: 30px;
 }
-.home-medio .home-medio a {
+.home-medio h2 {
+  text-align: center;
+  padding: 10px;
+}
+.home-medio a {
   padding: 15px;
+}
+.home-medio .home-medio-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .home-medio .home-medio-img img {
   object-fit: cover;
@@ -278,11 +312,12 @@ footer nav .logorrss {
 }
 @media screen and (max-width: 768px) {
   .pricing-heroe {
-    justify-content: center;
     display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    gap: 15px;
   }
 }
 @media screen and (max-width: 650px) {
