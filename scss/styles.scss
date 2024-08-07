@@ -444,7 +444,10 @@ label {
     width: 100%;
     background-color: $background-color-primary;
     color: $color-white;
-    padding: $home-medio-padding;
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 
     &-img {
         img {
@@ -453,6 +456,19 @@ label {
             height: $home-medio-img-height;    
         }
     }
+    .solutions-heroe-img {
+        align-self: center;
+        margin-bottom: 10px;
+        img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+        }
+    
+    .solutions-boton {
+        margin-bottom: 10px;
+    }
+}
 }
 
 .solutions-checklist {

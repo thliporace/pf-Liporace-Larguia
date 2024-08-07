@@ -583,12 +583,27 @@ label {
   width: 100%;
   background-color: #083A72;
   color: #FFFFFF;
-  padding: 30px;
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .solutions-heroe-img img {
   border-radius: 15px;
   width: 80%;
   height: 80%;
+}
+.solutions-heroe .solutions-heroe-img {
+  align-self: center;
+  margin-bottom: 10px;
+}
+.solutions-heroe .solutions-heroe-img img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+.solutions-heroe .solutions-heroe-img .solutions-boton {
+  margin-bottom: 10px;
 }
 
 .solutions-checklist {
