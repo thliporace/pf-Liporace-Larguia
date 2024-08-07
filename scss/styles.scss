@@ -15,6 +15,8 @@ $home-medio-padding: 30px;
 $home-medio-a-padding: 15px;
 $home-medio-img-height: 80%;
 $home-medio-img-width: 80%;
+$txt-center: center;
+$borde-pricing: 15px;
 
 .heroe-cont {
     width: 100%;
@@ -24,7 +26,7 @@ $home-medio-img-width: 80%;
         .heroe-txt {
         background-color: $background-color-primary;
         padding: $padding;
-        text-align: center;
+        text-align: $txt-center;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -54,6 +56,7 @@ $home-medio-img-width: 80%;
             border-radius: $border-radius;
             width: 80%;
             height: 70%;
+            object-fit: cover;
         }
     }
 }
@@ -65,7 +68,7 @@ $home-medio-img-width: 80%;
     padding: $home-medio-padding;
 
     h2{
-        text-align: center;
+        text-align: $txt-center;
         padding: $padding-secundario;
     }
     a {
@@ -94,7 +97,7 @@ $home-medio-img-width: 80%;
     margin-bottom: 15px;
     h3 {
         color: $color-white;
-        text-align: center;
+        text-align: $txt-center;
         padding: $padding;
     }
 }
@@ -102,7 +105,7 @@ $home-medio-img-width: 80%;
 .home-tarjeta {
     border: solid 1px $color-white;
     border-radius: 15px;
-    text-align: center;
+    text-align: $txt-center;
     width: 300px;
     height: 350px;
 
@@ -124,7 +127,7 @@ $home-medio-img-width: 80%;
 }
 .homefinal {
     font-size: large;
-    text-align: center;
+    text-align: $txt-center;
     margin-top: 15px;
     margin-bottom: 20px;
 
@@ -136,7 +139,7 @@ $home-medio-img-width: 80%;
 }
 
 .titulo-pricing {
-    text-align: center;
+    text-align: $txt-center;
     margin-top: 25px;
     margin-bottom: 25px;
     padding: $padding;
@@ -145,37 +148,47 @@ $home-medio-img-width: 80%;
 }
 .pricing-heroe {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 25px;
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 
     @media screen and (max-width: 768px) {
             display: grid;
-            justify-content: center;
+            justify-content: space-evenly;
             align-items: center;
             gap: 15px;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: 1fr;
-        
+            grid-template-rows: repeat(2, 1fr);
+            .opcion-c {
+                grid-column: 1 / 3;
+                justify-self: center;
+                align-self: center;
+            }
     }
 
     @media screen and (max-width: 650px) {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: auto;
             gap: 20px;
-            justify-content: space-evenly;
-            align-items: center;
-            align-content: center;
-            justify-content: center;
+
+            .opcion-a {
+                justify-self: center;
+                align-self: center;
+            }
+            .opcion-b {
+                justify-self: center;
+                align-self: center;
+            }
+            .opcion-c {
+                grid-column: auto;
+                justify-self: center;
+                align-self: center;
+            }
+
         }
-    @media screen and (max-width: 550px) {
-        
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-auto-rows: auto;
-            gap: 20px;
-    }
+
     .pricing-options{
         display: flex;
         flex-direction: column;
@@ -185,33 +198,68 @@ $home-medio-img-width: 80%;
         width: 330px;
         padding: $padding-secundario;
         border: solid 1PX #aaa2a2b9;;
-        border-radius: 15px;
+        border-radius: $borde-pricing;
         box-shadow: 0px 3px 2px 2px #0a59b970;
-        text-align: center;
+        text-align: $txt-center;
         .pricing-options div ul {
             margin: 5px;
         }
-        .pricing-options div a button {
-            margin: 55px;
-        }
     }
 }
+
 .pricing-segseccmain {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     align-content: normal;
+    text-align: $txt-center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
     @media screen and (max-width: 550px) {
-        .pricing-segseccmain {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-auto-rows: auto;
-            gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        gap: 20px;
+    }
+    .pricing-segsecc {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: normal;
+        width: 100%;
+        margin: 25px;
+
+        .pricing-checklist-flex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            align-content: center;
+            gap: 10px;
+            p {
+                text-align: left;
+                margin-right: 5px;
+                padding: 2px;
+            }
         }
     }
     
 }
+.pricing-segsecc-img {
+    img {
+        height: 80%;
+        width: 80%;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+}
+
+
+
 .pricing-features {
     display: flex;
     flex-direction: column;
@@ -219,21 +267,25 @@ $home-medio-img-width: 80%;
     margin: 15px;
 
     div {
-        p {
-            text-align: center;
+        h4 {
+            text-align: $txt-center;
             font-weight: 700;
         }
     }
 }
 .table-features {
     margin: 10px;
-    width: 60%;
-    height: 40px;
-    padding: 10px;
-    text-align: left;
+    width: 65%;
+    text-align: $txt-center;
     border: 1px solid #b0b0b0;
-    border-color: black;
-    border-radius: 5px;
+    border-collapse: separate;
+    overflow: hidden;
+    border-radius: $borde-pricing;
+
+    td {
+        text-align: left;
+        padding-left: 5px;
+    }
 
     tr {
         &:nth-child(even) {
@@ -244,46 +296,12 @@ $home-medio-img-width: 80%;
             background-color: #ddd;
         }
     }
-}
-.pricing-segsecc {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: normal;
-    width: 100%;
-    margin: 25px;
-    .pricing-checklist-flex {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        align-content: center;
-        margin-bottom: 10px;
-        gap: 10px;
-        text-align: justify;
-    }
-}
-
-.pricing-segseccmain {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    align-content: normal;
-
     @media screen and (max-width: 550px) {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto;
-        gap: 20px;
+        width: 90%;
     }
-}
-.pricing-segsecc-img {
-    img {
-        height: 80%;
-        width: 80%;
+
+    @media screen and (max-width: 450px) {
+        width: 100%;
     }
 }
 
@@ -351,7 +369,7 @@ $home-medio-img-width: 80%;
     justify-content: space-around;
     align-items: center;
     align-content: stretch;
-    text-align: center;
+    text-align: $txt-center;
     div img {
         height: 50%;
         width: 50%;
@@ -367,7 +385,7 @@ $home-medio-img-width: 80%;
     border-radius: $border-radius;
     color: $color-white;
     padding: $padding-secundario;
-    text-align: center;
+    text-align: $txt-center;
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
@@ -454,11 +472,10 @@ label {
     max-width: 100%;
     margin: $padding-secundario;
 
-    &-img {
-        img {
-            width: $home-medio-img-width;
-            height: $home-medio-img-height;
-        }
+    .solution-segsecc-img {
+        height: 70%;
+        width: 70%;
+        object-fit: contain;
     }
 }
 
@@ -469,7 +486,7 @@ label {
     padding-bottom: $padding-secundario;
 
     h2 {
-        text-align: center;
+        text-align: $txt-center;
         padding: $padding-secundario;
     }
 }
@@ -492,7 +509,7 @@ label {
     }
 
     h3 {
-        text-align: center;
+        text-align: $txt-center;
         font-size: larger;
         display: flex;
         justify-content: flex-start;
@@ -516,7 +533,7 @@ label {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: $txt-center;
     width: 100%;
     margin: $padding-secundario;
 
