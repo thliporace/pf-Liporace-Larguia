@@ -93,7 +93,7 @@ a {
   cursor: pointer;
 }
 .boton:hover, .boton:active {
-  box-shadow: 2px 2px 5px rgba(17, 128, 241, 0.67);
+  box-shadow: 2px 2px 5px rgba(17, 128, 241, 0.8);
 }
 
 .boton-log {
@@ -108,7 +108,7 @@ a {
   cursor: pointer;
 }
 .boton-log:hover, .boton-log:active {
-  box-shadow: 2px 2px 5px rgba(17, 128, 241, 0.67);
+  box-shadow: 2px 2px 5px rgba(17, 128, 241, 0.8);
 }
 
 @media screen and (min-width: 768px) {
@@ -602,8 +602,12 @@ label {
   height: 70%;
   object-fit: contain;
 }
-.solutions-heroe .solutions-heroe-img .solutions-boton {
+.solutions-heroe .solutions-boton {
   margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
 }
 
 .solutions-checklist {

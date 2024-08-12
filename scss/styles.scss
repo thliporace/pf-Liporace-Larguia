@@ -464,11 +464,14 @@ label {
             height: 70%;
             object-fit: contain;
         }
-    
+    }
     .solutions-boton {
         margin-bottom: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
     }
-}
 }
 
 .solutions-checklist {
