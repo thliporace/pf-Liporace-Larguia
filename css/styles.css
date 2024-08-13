@@ -733,7 +733,8 @@ label {
   align-items: center;
   text-align: center;
   width: 100%;
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .solutions-secc-final h2 {
   margin-top: 10px;
