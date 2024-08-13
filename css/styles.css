@@ -24,6 +24,10 @@ footer {
   max-width: 100%;
 }
 
+nav {
+  max-width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -125,6 +129,7 @@ header nav .menu {
   list-style-type: none;
   background-color: #E5E5E5;
   width: 100%;
+  max-width: 100%;
   position: fixed;
   top: 0;
   display: flex;
@@ -228,7 +233,6 @@ footer nav div a ul {
 
 .home-medio {
   width: 100%;
-  margin: 25px;
   max-width: 100%;
   padding: 30px;
 }
@@ -512,12 +516,20 @@ footer nav div a ul {
   align-content: stretch;
   text-align: center;
 }
-.register-tit div img {
-  height: 50%;
-  width: 50%;
+.register-tit .logo-register {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  height: 40%;
+  width: 40%;
 }
 .register-tit section {
   margin: 15px;
+}
+
+.register-end {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .botonlogin1, .botonlogin2 {
@@ -551,7 +563,7 @@ footer nav div a ul {
   margin: 1px;
 }
 .registerinput:focus + label, .registerinput:not(:placeholder-shown) + label {
-  top: -10px;
+  top: -15px;
   left: 20px;
   font-size: 12px;
   color: #3a3e42;
@@ -559,7 +571,7 @@ footer nav div a ul {
 
 label {
   position: absolute;
-  top: 10px;
+  top: 15px;
   left: 30px;
   color: #aaa;
   transition: all 0.3s ease;
@@ -587,19 +599,20 @@ label {
   padding-top: 20px;
   padding-left: 10px;
   padding-right: 10px;
-}
-.solutions-heroe-img img {
-  border-radius: 15px;
-  width: 80%;
-  height: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
 }
 .solutions-heroe .solutions-heroe-img {
-  align-self: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   margin-bottom: 10px;
 }
 .solutions-heroe .solutions-heroe-img img {
-  width: 70%;
-  height: 70%;
+  width: 65%;
+  height: 65%;
   object-fit: contain;
 }
 .solutions-heroe .solutions-boton {
@@ -610,6 +623,12 @@ label {
   gap: 10px;
 }
 
+.solutions-heroe-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .solutions-checklist {
   width: 20px;
   height: 20px;
@@ -618,13 +637,14 @@ label {
 .solutions-checklist-flex {
   display: flex;
   flex-direction: row;
-  align-content: center;
+  justify-content: center;
 }
 
 .solutions-segsecc {
   width: 100%;
   max-width: 100%;
-  margin: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .solutions-segsecc .solution-segsecc-img {
   height: 70%;
