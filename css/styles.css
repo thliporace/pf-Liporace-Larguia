@@ -604,11 +604,20 @@ label {
   align-items: center;
   text-align: center;
 }
+.solutions-heroe .solutions-heroe-txt {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .solutions-heroe .solutions-heroe-img {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 500px) {
+  .solutions-heroe .solutions-heroe-img img {
+    display: none;
+  }
 }
 .solutions-heroe .solutions-heroe-img img {
   width: 65%;
@@ -623,10 +632,17 @@ label {
   gap: 10px;
 }
 
+.solutions-heroe-txt {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .solutions-heroe-flex {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .solutions-checklist {
@@ -647,8 +663,8 @@ label {
   margin-bottom: 40px;
 }
 .solutions-segsecc .solution-segsecc-img {
-  height: 70%;
-  width: 70%;
+  height: 80%;
+  width: 80%;
   object-fit: contain;
 }
 
